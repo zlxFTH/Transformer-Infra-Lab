@@ -1,0 +1,17 @@
+[project]
+name = "transformer-infra-lab"
+version = "0.1.0"
+description = "Transformer Infra Lab: from-scratch Transformer + high-performance kernels"
+requires-python = ">=3.14"
+
+[build-system]
+requires = ["uv_build>=0.11,<0.14"]
+build-backend = "uv_build"
+
+[tool.uv]
+# The root is a virtual workspace: it owns the single `.venv` and `uv.lock`,
+# but does not install itself as a package.
+package = false
+
+[tool.uv.workspace]
+members = ["cs336-a1"]
